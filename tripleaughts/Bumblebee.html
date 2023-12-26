@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<title> Buzzed bumblebee</title>
+<meta charset="utf-8">
+<meta lang="en">
+<meta name="author" content="IEW144">
+<meta name="description" content="buzzed bumblebee"> 
+<meta name="keywords" content=" Tripleaughts, IEW144, hospitality,review" >
+<meta name="veiwport" content="width=device-width; initial-scale="1">
+<head>
+  <style>
+* { 
+  border-sizing: border-box;
+  flex: center; }
+
+
+body {
+  background-color: lightgrey;
+}
+
+header {
+  background-color: black;
+  color: #F2D638;
+  width: 100%;
+  text-align: center;
+}
+table { 
+  background-color: #E9B033;
+  Width: 100%;
+  border: 2px solid #8e8f95;
+ }
+td { 
+  font-family: verdana;
+  padding: 20px;
+  color: #010600;
+  }
+select { height:30px;
+  color:#010600;
+  background-color: #8e8f95;
+  border-color:#010600;
+  width: 150px;
+  }
+input[type=text]{ 
+  width: 100%;
+  height: 50px;
+  background-color:#8e8f95;
+  color: #010600;
+  }
+
+input[type=submit]{ 
+  width: 150px;
+  height: 30px;
+   color: #f2d638;
+   background-color: #010600;
+   }
+input[type=email]{
+  width: 150px;
+  height: 30px;
+  background-color:#8e8f95;
+  color: #f20638;
+  font-size: 18px;
+}
+footer { 
+  background-color: #010600;
+  width: 100%;
+  color: #e9b033;
+  text-align: center;
+}
+a { color: #E9b033;
+}
+a:visited { color: #8e8f95;}
+
+a:hover { color: #8e8f95;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Share your experience.</h1>
+  </header>
+  <secton> 
+   <!-- <p> How would you rate your experience? </p>-->
+    <table>
+      <tr>
+        <td>
+    <form action="./action_page.php" method="post" name="review">
+     <label for="which"> Which restaurant did you patronize?<br><br>
+     Pop's Basement</label>
+     <input type="radio" id="which" name="review" value="Pop">
+     <label for="GW"> Golphin Williams</label>
+     <input type="radio" id="which" name="review" value="GW">
+     <label for="Buds"> Bud's</label>
+     <input type="radio" id="buds" name="review" value="Buds">
+     
+    
+     
+    </td>
+    </tr>
+     <tr>
+      <td>
+      <label for="service">Rate the service</label><br><br>
+      <select name="review" id="service"> 
+        <option value="1"> Superb</option>
+        <option value="2"> Above Average</option>
+        <option value="3"> Just ok </option>
+        <option value="4"> Needs Work</option>
+        <option value="5"> Unacceptable</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <td>
+      <label for="food"> Rate the food: </label><br><br>
+      <select name="review" id="food">
+          <option value="1"> One of the best in the city</option>
+          <option value="2"> Tasty and fresh </option>
+          <option value-"3"> Made to Specification</option>
+          <option value="4"> Overdone or Underseasoned</option>
+          <option value="5"> Terrible</option>
+      </datalist>
+      </td>
+       </tr>
+       <tr>
+      <td>
+        <label for="tellus"> Leave a review if you'd like:</label><br><br>
+          <input type="text" id="tellus" name="review" height="20px"width="100%"></textarea>
+      </td>
+       </tr>
+       <tr>
+       <td>
+    <label for="email"> if you'd like to recieve our newsletter enter your email below</label><br><br>
+    <input type="email" name="review" id="email" >
+       </td>
+       </tr>
+       <tr>
+        <td>   
+    <input type="submit" value="submit" name="review">
+       </td>
+       </tr>
+    </table>
+    </form>
+  </secton>
+  <footer> 
+    <h2> &copy Copyright IEW144</h2>
+     <p> 
+      <a href="./index.html">Contact us</a>
+    </p>
+  </footer>
+</body>
+
