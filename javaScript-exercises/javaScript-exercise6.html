@@ -1,0 +1,137 @@
+<html>
+
+</h3> Continuing with concat()method</h3>
+
+<p> I want the function to execute the opening lyrics to that famous song from rent</p>
+
+<button style="background:black; color:yellow; padding:5px" onclick="display()"> how do you measure a year?</button>
+
+<p id="rent"></p>
+
+<script>
+	//semi colons are cool here, maybe its the nature of the let variable//
+function display(){
+	let p1 = "Five hundred";
+	let p2 = "twenty five thousand";
+	let p3 = "six hundred minutes";
+	
+	let p4 = p1.concat(p2 ,p3);
+	
+	document.getElementById("rent").innerHTML =
+	p4.toUpperCase() + p2.slice(5, 10);
+}
+	
+	//playing with different methods, put it in a function scripted to a button//
+</script>
+
+</h3> smells like whitespace to me</h3>
+
+<div style="width: 100%; background: black; color: white;">contains
+	<p style="background: lightgrey" id="first">the</p>
+	<p id="second">multitudes</p>
+	<p id="third">my lord</p>
+</div>
+
+<script>
+	let t1 = "..      loook  at all this white stuff       ...     ";
+	
+	document.getElementById("first").innerHTML = t1 + "<br>" + t1.length;
+	
+	document.getElementById("second").innerHTML =
+	 t1.trimStart()+ t1.trimStart().length;
+	//there is no difference between the two results the length is 53//
+</script>
+
+</h3> padStart()</h3>
+
+<p> pad a string with "0" until it reaches length "6"
+	
+<p id="demo"></p>
+
+<p id="demo1"></p>
+
+
+<p> pad a string with 'y' til it reaches length 12</p>
+
+<script>
+	 let num = 6;
+	 let zero = num.toString();
+	 
+	 document.getElementById("demo").innerHTML =
+	  zero.padStart(6, 0);
+	  
+	
+	  let digit = "y";
+	  let twelve = digit.toString();
+	  
+	  document.getElementById("demo1").innerHTML =
+	  twelve.padStart(12, "y");
+	  
+</script>
+
+<h3> javascript string repeat()</h3>
+
+<p><em>never forget that strings are immutable</em> creating a button that repeats the text below</p>
+
+<p id="copy"> a copy of a string</p>
+
+<button onclick="repeat()"> on REpeat!!</button>
+
+
+<p id="crazy"> I am slowly going crazy, Crazy going slowly am I</p>
+
+<button style="background: tomato; border-radius: 5px; padding: 20px;" onclick="slowly()">Again!</button>
+<script>
+	function repeat() {
+		let words = document.getElementById("copy").innerHTML;
+
+		document.getElementById("copy").innerHTML =
+		 words.repeat(4);
+		
+}	
+	function slowly(){
+		let text =
+	//command/declare/call the text in the paragraph as the source//
+
+	document.getElementById("crazy").innerHTML;
+	document.getElementById("crazy").innerHTML = 
+		text.repeat(3);
+			
+		}
+		
+	//yo!!! this shit operates in a exponential way!!!
+</script>
+
+<h3> the replace() method</h3>
+
+<p> what'd i tell you about strings being immutable babe? so this method returns a new string and does not change the original string</p>
+
+<p id="tiki">AIght so in this thing is the best thing and the thing about it is that this paragragh thing will make no sense. it'll be a drawn thing.</p>
+
+<button type="button" onclick="grt()" style="background: grey; height: 50px; width: 300px; border-radius: 10px; color: white;">The Who's?</button>
+
+
+<p id="whyte"> Harvard is a institution that teaches Harvard students how to uphold Harvard's standards.</p>
+
+<button style="background: darkgreen; color: lightyellow; width: 275px; height: 30px;" type="button" onclick="yt()"">DEI</button>
+<script>
+	
+	function grt(){
+		let chant = document.getElementById("tiki").innerHTML;
+		
+		document.getElementById("tiki").innerHTML = chant.replace("th", "jawn");
+	}
+	
+	function yt() {
+		let yardy = document.getElementById("whyte").innerHTML;
+		
+		document.getElementById("whyte").innerHTML = yardy.replace("Harvard", "The violent protection of white mediocrity");
+		
+//i tried to replace a different string in the same command/call. replace("standards, "tactics") and the result was wonky
+	}
+	
+	
+</script>
+
+
+

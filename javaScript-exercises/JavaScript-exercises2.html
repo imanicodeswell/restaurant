@@ -1,0 +1,132 @@
+<html>
+<h3> show me the money: using the dollar sign</h3>
+<p> dollar sign is a letter, so you can assign value to it</p>
+<p id="demo"></p>
+<p> same is true for an underscore- its treated as a letter and can be used in JavaScript names</p>
+<p id="demo1"></p>
+
+<p> <b>let</b> variables have Block SCope. must be declares and cannot be redeclared in the same scope. you cant use these brakets{} with let.</p>
+<p id="demo2"></p>
+<p> again using let doesnt seem to be working. it's causing a script error because nothing was assigned to it</p>
+<p id="demo3"></p>
+<script>
+	let $$$ = 2, $myMoney = 5, $ = 3;
+	
+document.getElementById("demo").innerHTML = $$$ + $ + $myMoney;
+
+let _lastName = "Johnson", _x = 2, _100 = 5;
+document.getElementById("demo1").innerHTML = _lastName + _x;
+</script>
+
+
+<script>
+	var x = 2;
+//x is 2 here//
+
+{var x = 4;}
+//x is 4 here//
+
+document.getElementById("demo2").innerHTML = x;
+</script>
+
+<script> 
+	let y = 3;
+	
+	{let y = 4;}
+	
+	document.getElementById("demo3").innerHTML = y;
+</script>
+
+<h3> learing about const and arrays</h3>
+
+<p id="demo4"></p>
+
+<script>
+	//create an array://
+const shows = ["succesion", "veep", "abbot elementary",];
+
+//change an element://
+shows[0] = "GOT";
+
+//add an element:
+shows.push("rick and morty")
+
+//display the array
+document.getElementById("demo4").innerHTML = shows;
+
+</script>
+
+<p> so the array is whats between these brakets: []
+Const defines a constant reference to a value.you can change the elements and properties of a const object. the program displays the full array of properties.</p>
+
+<h3> constant object</h3>
+
+<p> change the properties of a constant object</p>
+<p id="demo5"></p>
+
+<script>
+	//create a const object:
+	const essayist = { type: "cornbread tube", handle: "laron readus", views: "160k", subs: "500k"};
+	//change a property
+	essayist.subs = "71.7k";
+	
+	//add a property
+	essayist.orientation = "gay as hell";
+	
+document.getElementById("demo5").innerHTML = "i love " + essayist.type;
+</script>
+<p> so im starting to understand the syntax a bit. forgot to put quotes around the number, needed quotes because of the 'k'.</p>
+
+<p id="demo7"></p><p> fun with combined operators?this example utilizes +=. 16 + 4 =</p>
+
+<p id="demo8"></p><p> this example uses -= answering 20 - 4:</p>
+
+<script>
+	let f = -16;
+	f += -4;
+document.getElementById("demo7").innerHTML = f;
+
+	let i = 20;
+	i -= 4;
+document.getElementById("demo8").innerHTML =  i;
+</script>
+
+
+
+
+<p> continuing with *=<p id="demo9"></p> 
+<p> an example of exponential calculation using **= </p><p id="demon">?</p>
+<p> next one is division /=</p> <p id="divide"></p>
+<p> last one in this bunch %=</p> <p id="percent"></p>
+
+<script>
+	let m = 15;
+	m *= 7;
+document.getElementById("demo9").innerHTML = m;
+
+let a = 15;
+ a **= 7;
+ 
+document.getElementById("demon").innerHTML = a;
+
+	let t = 18;
+	t /+ 3;
+document.getElementById("divide").innerHTML = t;
+
+
+let h = 6;
+h %=25;
+
+document.getElementById("percent").innerHTML = h;
+</script>
+
+
+<p> doing math then strings<p id="try"></p>
+<p> strings then arithmatic</p><p id="again">
+<script>
+	let q = 2 * 8 + "string";
+document.getElementById("try").innerHTML = q;
+
+	let v = "maths" + 17;
+document.getElemntById("again").innerHTML = v;
+</script>

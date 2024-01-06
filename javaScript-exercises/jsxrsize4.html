@@ -1,0 +1,227 @@
+<h3> JavaScript Function</h3>
+
+<p> a block of code that performs a specific task when called for.  call a function that does math and tell us the answer.  whats 15 divided by 2?</p>
+
+<p id="demo"></p>
+
+<script>
+	function myFunction(p1, p2){
+		return p1 / p2;
+	}
+	
+let result = myFunction (15, 2);
+document.getElementById("demo").innerHTML =
+	result;
+</script>
+
+
+<p> some more maths  3(2 * 5):</p>
+<p id="demo1"></p>
+<p> so i was able to use let to declare values and do math that way too.  what is 5 
++ 4?</p>
+
+<p id="demo2"></p>
+
+<script>
+	let x = multi(3, 2, 5);
+document.getElementById("demo1").innerHTML = x;
+
+  function multi(a, b, c ) {
+	  return a* (b * c);
+  }
+  
+  
+ let d = 4
+ let e = 5
+ let f = d + e;
+ 
+document.getElementById("demo2").innerHTML = f;
+</script>
+
+<p> with <b>function</b> you can reuse code.<br>
+	below i will convert from 212 degrees farenheit to ? celsius!<br> Crazy that when i changed the word value to result it changed the answer to 7.5. mind blown. it refered to the declared "result" higher up on the page.
+</p>
+
+<p id="demo3"></p>
+
+<script>
+	
+
+let value = "The temperature is " + toCelsius(212) + "Celsius";
+document.getElementById("demo3").innerHTML =
+ value;
+ 
+ function toCelsius(f) {
+	 return (5/9) * (f-32);
+ }
+</script>
+
+
+<p> toCelsius refers to the function object;
+	toCelcius() refers to the <em>result</em> of the function. there must be something inside the paranthesis or shit'll get fuckedup. <br> it also seems to be important in which order you put things in the script. like i think you have to set up the variables and stuff before you initiate a function</p>
+	
+<h3> using a function as a variable.</h3>
+
+<p> how many centimeters in 15 inches?</p>
+<p id="demon"></p>
+
+<script>
+	
+	let length = "The length is "+ toCentimeters(15) + " centimeters";
+	document.getElementById("demon").innerHTML = length;
+	
+	function toCentimeters(i) {
+		return i * 2.54;
+	}
+</script>
+
+<p> convert 30 knots to miles per hour</p>
+<p id="speed"></p>
+<p> conert 2 tablespoons of water to grams</p>
+<p id="volume"</p>
+	
+<script>
+	
+ 	let schull = "the speed is " + toMph(30)
+ 	+ " miles per hour.";
+ 	document.getElementById("speed").innerHTML = schull;
+ 	
+	function toMph(k) {
+		return k * 1.151;
+	}
+
+
+	let space =  toGrams(2) + "  grams is the amount."
+	document.getElementById("volume").innerHTML = 
+		space;
+	
+	function toGrams(T){
+		return T * 15;
+	}	
+</script>
+
+
+<p> local variables</p>
+<p> i think this refers to declaring variables inside the function object<br>
+	ok lets get the answer to --if a<sup>2</sup> + a<sup>2</sup> equals c<sup>2</sup>; then what does c equal
+</p>
+<p id="right"></p>
+<script>;
+		function hyp(t, m, z){
+			return t*t + m*m;
+		}
+		let answer = hyp(3, 4,);
+		
+		document.getElementById("right").innerHTML = "the answer is " + Math.sqrt(answer) ;
+	
+</script>
+	<p> the code above is not an example of local variable.</p>
+	<p id="demons"></p>
+	
+	<script>
+	function myFunction() {
+		let carName = "kia";
+		let text = "local variable inside the function object" + typeof carName + " " + carName;
+	document.getElementById("demons").innerHTML = text;
+	}
+	
+	myFunction();
+	
+	</script>
+	
+	<p> this syntax seems weird. why would you want to do it this way.</p>
+	
+	<h3> javaScript Objects</h3>
+	
+	<p> objects are variables that conatin many values usually declared with <b>const</b></p>
+	<p id="cars"></p>
+<script>
+		
+		const car = {
+			carMake:"Kia",
+			carModel:"Soul",
+			carColor: "white",
+			breakIns: 3,
+			
+		};
+		
+	document.getElementById("cars").innerHTML = "howmany times them kiabois get u" + car.breakIns;
+	
+</script>
+
+<p> create a smosh object</p>
+<p id="smosh"></p>
+
+<p> create a niece object</p>
+<p id="neice"></p>
+
+<script> 
+	//create the object
+	const cast = {
+		blondeGuy: "Shayne",
+		blondeThem: "Courtney",
+		comedyBrunette: "Amanda",
+		italianChick: "Angela",
+		mostHottest: "Arasha",
+		gayBlack: "Chanse",
+		gayWhite: "Tommy"
+
+	};
+	// display some data from the object
+	document.getElementById("smosh").innerHTML = "who should be the face of smosh? " + cast.gayBlack +".  and which castmember does the same bit?" + cast.gayWhite;
+	
+	
+	const girls = {
+	oldest: "Riley",
+	youngest: "Ellie",
+	oldNickname: "Tuffy",
+	youngNickname: "Belly",
+	oldAge: 5,
+	};
+	
+	document.getElementById("neice").innerHTML =
+	girls.oldest + "'s nickname is " + girls.oldNickname;
+	
+</script>
+
+<h3> object methods</h3>
+
+<p> a method is a function stored as a property</p>
+
+<p id="film"></p>
+<p id="sing"></p>
+
+
+<script>
+	
+	// creating the object
+	const movie = {
+		genre: "heist",
+		title: "Money Train",
+		leadActor: "Martin Lawrence",
+		supportActor: "Charlie Sheen",
+		poster : function(){
+			return this.leadActor + " & " + this.supportActor + " in "
+			+ this.title;
+		}
+	};
+	//calling the function result
+	document.getElementById("film").innerHTML = 
+	movie.poster();
+
+
+const 	album = {
+	artist: "Janelle Monae",
+	bestSong: "Cold War",
+	midSong: "pynk",
+	name: "age of pleasure",
+	traditionalDress: "tuxedo",
+	presentation : function() {
+		return this.artist + "wears a " + this.traditionalDress;
+	}	
+};
+document.getElementById("sing").innerHTML = album.artist + album.presentation();
+</script>
+
+<p> the output doesnt make sense but it is what i asked for</p>
+

@@ -1,0 +1,99 @@
+<html>
+<body>
+	<h1> here we go!</h1>
+	
+	<p> using javaScript to do math</p>
+	
+	<p id="demo"></p>
+	
+	<script> 
+
+const x = 14;
+const y = 32;
+const z = x * y;
+document.getElementById("demo").innerHTML = "The value of z is: " + z;
+</script>
+
+<h3> mixing const and let </h3>
+
+<p id="demo1"></p>
+
+<script>
+	const price1 = 6;
+	const price2 = 7;
+	let total = price1 + price2;
+
+document.getElementById("demo1").innerHTML = "The total is: " + total;
+	
+</script>
+
+<h3> declaring a variable </h3>
+
+<p id="baby"></p>
+<p id="grand"></p>
+<script>
+	
+	let babyName = "Riley";
+	document.getElementById("baby").innerHTML = babyName;
+	
+	let grandma = "evon";
+	document.getElementById("grand").innerHTML = grandma;
+</script>
+<div></div>
+<h3> declaring many variables in one statement</h3>
+
+<p id="demo2"></p><p> a program that results in displlaying carname.</p>
+<p id="demo3"></p><p> program results in artist</p>
+<script>
+	let person = "Ludacris", carName = "Escalade", songTitle = "fantasy", Album = "chicken & beer";
+document.getElementById("demo2").innerHTML = carName;
+
+let artist = "Lauryn Hill", songName = "That Thing", album = "The miseducation of Lauryn Hill", grammywins = 8;
+
+document.getElementById("demo3").innerHTML = artist;
+</script>
+
+<h3> undelclared variables</h3>
+
+<p id="demo4"></p><p> a variable without value produces a script error</p>
+
+<script>
+	let show = "succsession";
+document.getElementById("demo4").innerHTML = show;
+</script>
+
+<h3> lets do some maths</h3>
+
+<p id="demo5"></p>
+<p id="demo6"></p>
+ <script> 	
+	 let b = "5" * 8;
+document.getElementById("demo5").innerHTML = b;
+</script>
+<p>
+<script>
+let r = "john" + " " + "lennon" ;
+document.getElementById("demo6").innerHTML = r;
+</script>
+
+
+<p id="demo7"></p><p> is the answer to 2 times pi.</p>
+	<p id="demo8"></p><p>answers this</p> 
+<script>
+	const pi = 3.1415;
+	let a = 2;
+	let u = (a * pi);
+document.getElementById("demo7").innerHTML = u;
+</script>
+
+<script>
+	let t = 10;
+	let p = (5 + 8) * t;
+
+	
+document.getElementById("demo8").innerHTML = p;
+</script>
+
+
+
+</html>

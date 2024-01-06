@@ -1,0 +1,154 @@
+<html>
+<body>
+	<h3> Boolean data types </h3>
+	
+<p> is a thing a thing:<p id="boothing"></p>
+<p> is a thing a thang:<p id="boothang"></p>
+<script>
+	let a = 1;
+	let b = 2;
+	let c = 2;
+document.getElementById("boothing").innerHTML =
+(c == b);
+
+document.getElementById("boothang").innerHTML = 
+(a == b);
+</script>
+
+<p> array objects are written btwn [square brackets]. seperate items inside the array with commas,,,,,,</p><p id="songs"></p> <p id="char"></p>
+<p> the above is the result of calling for the 1st item in the array. this is called being "zero based".</p>
+
+<p> words</p><p id="team"></p>
+
+<script>
+	const song = [ "africa", "xo", "adorn", "comme si"];
+document.getElementById("songs").innerHTML = 
+	song[0];
+	
+
+const folk = [ "jacob", "janine", "ava", "mister eddie", "barbara"];
+document.getElementById("char").innerHTML = 
+	folk[1];
+
+	const teams = [ "sixers", "eagles", "unity", "flyers", "phillies"];
+	document.getElementById("team").innerHTML = 
+	teams[3];
+</script>
+
+
+<h3> javascript objects</h3>
+
+<p> use the {curly brackets} to describe an object, the correct syntax is name:value ie {firstName: "John"}? i want to call the lead property from the killBill Object</p><p id="killBill">
+
+<script>
+	const  killBill = { 
+		director:"Tarantino", 
+		lead:"Uma Thurman", 
+		supportingActress:"LUcy Liu", 
+		leadActor: "david Carradine", 
+		theme: "revenge"};
+document.getElementById("killBill").innerHTML = "the acctress" + killBill.lead + "plays the bride. and" + killBill.director + "directs.";
+</script>
+		
+
+<p> who killed mr burns? what what the motive?</p>
+<p id='simpsons'></p>
+<p> is it possible to call two different results from one object? Who authored the first "the Simpsons" comic?</p>
+<p id="simpsons2"></p>
+
+<script>
+	const simpsons = {
+		creator: "matt groening",
+		killer: "maggie simpson",
+		motive: "a lolipop",
+		victim: "Mr. Burns",
+	};
+	
+document.getElementById("simpsons").innerHTML = simpsons.killer +
+	" killed him. And " + simpsons.motive + "was the reason.";
+	
+document.getElementById("simpsons2").innerHTML = simpsons.creator;
+</script>
+
+<p> the answer is fuck yes<p>
+	
+	
+<p> one more exercise where i create a constant object and change some of the properties. first question is who is the principal of abbot elementary?</p>
+<p id="abbot"></p>
+<p>name a teacher at abbot?
+<p id="abbot2"></p>
+<p> name a different teacher:</p>
+<p id="abbot3"></p>
+<script>
+	
+	const abbot = {
+		teacher: "Janine Teagues",
+		janitor: "Mister Johnson",
+		substitute: "Mister Eddie",
+		principal: "Ava Coleman",
+	}
+	
+document.getElementById("abbot").innerHTML = abbot.principal;
+
+document.getElementById("abbot2").innerHTML = abbot.teacher;
+
+abbot.teacher = "Barbara Howard";
+
+document.getElementById("abbot3").innerHTML = 
+	abbot.teacher;
+	
+</script>
+
+<p> so whats the difference between the practical uses for arrays and objects? can you put an array inside of an object?</p>
+
+
+<p> using the typeof operator. seems to be a way to ask if a variable or expression is a string or a number</p>
+
+<p id="typeshit"></p>
+
+<script>
+	document.getElementById("typeshit").innerHTML =
+	typeof "hello" + "<br>" +
+	typeof 0 + "<br>" +
+	typeof "10k"+ "<br>" +
+	typeof 3.14 + "<br>" + 
+	typeof pi + "<br>" +
+	typeof "pi";
+</script>
+
+<p> second try at a typeof list</p>
+<p id="typeA"></p>
+
+<script>
+	document.getElementById("typeA").innerHTML =
+	
+	typeof 2 + "<br>" +
+	typeof "string" + "<br>" +
+	
+	
+	typeof 108.987 + "<br>" +
+	typeof (9 + 8);
+	
+</script>
+
+<h3> fun with undefined variables</h3>
+<p> values and variables can be undefined. you cannot redefine the same variable in the same script.  </p>
+
+<p id="defn"></p>
+<p id="defn2"></p>
+
+<script>
+	let car;
+	
+	document.getElementById("defn").innerHTML =
+	
+	car;
+	
+	
+	var shoes = undefined;
+	
+	document.getElementById("defn2").innerHTML =
+	
+	shoes;
+</script>
+

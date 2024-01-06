@@ -1,0 +1,260 @@
+<h1> javaScript Events</h1>
+
+<p> an event happens when the webpage finished loading when someone fills out a form or clicks a button. So heres a button. when you click it it triggers an event that calls on the inline javascript</p>
+
+<button onclick="document.getElementById('demo').innerHTML = Date()"> what day is it?</button>
+
+<p id="demo"></p>
+<br>
+<p id="demo1"></p>
+
+<button onclick="this.innerHTML = Date()">Flavor Flav!!!</button>
+
+<p> the second button calls on a function () and changes the html of the element it is in.</p>
+
+<p id="demo2"></p>
+<button onclick="displayDate()">DJ Kahlid</button>
+<script>
+	function displayDate(){ 
+	
+		document.getElementById("demo2").innerHTML = Date ();
+}
+</script>
+
+<p> i will make a button that changes the phrase -</p>
+
+<p id="demo3"> Who you gonna call?<p>
+	
+	<button onclick="ghost()">I aint fraid</button>
+	
+	
+<p id="demo4">why you acting like a</p>
+	<button onclick="liljon()">like a</button>
+	
+	
+<script>
+	function ghost(){
+		document.getElementById("demo3").innerHTML = "Ghost Busters!!!!";
+	}
+	
+	function liljon(){
+		document.getElementById("demo4").innerHTML ="Bia Bia";
+	}
+</script>
+
+<p> The next button will change the text of the button</p>
+<button id="" onclick="this.innerHTML= '<b> Grand Closing</b>'""> <em>Grand Opening </em></button>
+
+<p> i was able to use "inline" javascript onclick on </p>
+
+<p> the length property will tell you the number of charachters in a string.<br> How many characters are in this sentence?
+</p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+<p> using typeof to understand how to turn a string into an object</p>
+<p id="demo7"></p>
+<script>
+	
+	 let text = "How many characters are in this sentence?";
+	 document.getElementById("demo5").innerHTML = text.length;
+	 
+	 let words = "the quick brown fox jumps over the lazy dog";
+	 document.getElementById("demo6").innerHTML = words;
+	 
+	 let y = new String("john");
+	 let x = "this should be a string";
+	 let z = 0.987;
+	 
+	 document.getElementById("demo7").innerHTML = typeof y + "<br>"+ typeof x + "<br>" + typeof z;
+	 
+</script>
+
+
+ <p> crazy how after they showed me how to do it they told me not to do it. but DONT USE STRINGS AS OBJECTS.</p>
+ 
+ <p> the property charAt() will tell you what number character you are looking for.  for example the display below describes the 1st and 8th character in the string "hows about it"</p>
+	 
+ <p id="demo8"></p>
+ 
+ <p id="demo9"></p>
+ <script>
+	 var line = "hows about it";
+	 document.getElementById("demo8").innerHTML = line.charAt(0) + line.charAt(7);
+	 
+	 let katt = "steve harvey is bald";
+	 document.getElementById("demo9").innerHTML = 
+	 	katt.charAt(10) + katt.charAt(8);
+	 
+</script>
+	 
+<p id="show"> </p>
+<p>the [brakets] around the number indicate an indexed element in a string</p>
+
+<p> in the script below i created a constant object and asked for the charAt[] from one of the properties</p>
+<div id="punk">words</div>
+
+<p> the fourth letter of the word 'roughneck'</p>
+<p id="party"></p>
+<script>
+	 const name = "Minori";
+	 let letter = name;
+	 let ltr = name [2];
+	 
+	 document.getElementById("show").innerHTML =
+	 letter + ltr;
+	 
+	 
+	 const game = {
+		 name: "cyberpunk",
+		 ignScore: 9,
+		 releaseDate: "Aug2022",
+	 };
+	 
+	 let consonant = game.name[2]
+	 document.getElementById("punk").innerHTML =
+	 consonant;
+	 
+	 
+	 const word = "roughneck"
+	 let ting = word.at(3)
+	 document.getElementById("party").innerHTML =
+	 ting;
+</script>
+
+<h3> Template STrings</h3>
+
+<p id="sticky"></p>
+<p id="stuck"></p>
+
+<script>
+	let lyric = 
+	"get your lighter roll your sticky lets get higher got that blue berry yum yumand its that fire";
+	
+	let bop = lyric.charAt(0)
+	document.getElementById("sticky").innerHTML =
+  typeof lyric+ " this is a template." + bop;
+  
+  // the method lyric.charAt(3) would not display -- because (bop;) the semicolon fucked it.//
+  
+  
+  let rich = "hello world";
+  let char = rich.charCodeAt(0);
+  let vow = rich.at(0)
+  
+  document.getElementById("stuck").innerHTML =
+  char + "<br>" + vow + " " + lyric.at(0) +"<br>"+
+  lyric[30]
+  //104 is the UTF-16 code for letter lowercase h.   use square brackets to make the code shorter. lyric.at() and lyric[] give the same returns. its called property asses when you use [square brackets] //
+</script>
+
+
+<p> string Slice
+	<br> a way to extract part of a string</p>
+	
+	<p id="gold"></p>
+	<p id="glitter"></p>
+	<p id="aint"></p>
+	<p id="silver"></p>
+	
+<script>
+	
+	let smash = "All that glitters aint gold";
+	
+	document.getElementById("gold").innerHTML =
+	smash[18] + "<br>" + smash[26] + "<br>" + smash.length
+//found out the index of aint gold, so now i can slice it out. //
+	
+	
+	document.getElementById("glitter").innerHTML =
+	smash.slice(18, 26)	
+//when i plugged 26 in here it returned "l" instead of the"d" i was expecting.
+
+    document.getElementById("aint").innerHTML =
+	smash.slice(18)
+//with this command the return was "aint gold"
+
+	document.getElementById("silver").innerHTML=
+	smash.slice(-26, -19)
+//when using negatives be sure that the first number is furthest from zero.//
+	
+</script>
+
+<h3>string substring method</h3>
+
+
+<p id="shop"></p>
+<p id="thrift"></p>
+<p> this will display eleven twelve and the number of characters</p>
+<p id="mackrel"></p>
+<p> this text should appear in uppercase</p>
+<p id="more"></p>
+
+<script>
+	
+	let amore = "When the moon hits your eye like a big pizza pie thats amore"
+	document.getElementById("shop").innerHTML =
+	amore.substring(5, 14) + "<br>" +
+	amore.substring(40) + "<br>" + "hey yoous wantz some-ah " + amore.substring(54) + " ?"
+
+	let count = "one, two, three, four five, six seven eight nine ten, eleven twelve"
+	
+	document.getElementById("thrift").innerHTML =
+	count.substring(4, 8)
+	
+//i want this to display "two"
+
+	document.getElementById("mackrel").innerHTML =
+	count.substr(54, 67) + "<br>" + count.length
+	
+	// i want this to display "eleven twelve"
+	
+	document.getElementById("more").innerHTML = 
+	amore.toUpperCase()
+</script>
+
+<p> put a button on it</p>
+<button onclick="anthem()">2nd verse</button>
+<p id="age">And the rockets red glare</p>
+
+<p> the button below will change the lyrics to lowercase</p>
+
+<button onclick="shout()"> lil bit softer now</button>
+
+<button onclick="hey()"> a  lil bit loudernow</button>
+	
+	
+<p id="isley"> A Lil bit softer now!! iknow i have headphones on but i dont feel like i am yelling</p>
+<p id="brothers"> a lil bit louder now!!!</p>
+
+<script>
+function shout(){
+	let hey =
+	
+	document.getElementById("isley").innerHTML;
+		
+	document.getElementById("isley").innerHTML = hey.toLowerCase();
+	//this takes the text that exists in the paragraph tages and changes it// 
+}
+	
+function hey() {
+	let yay =
+	
+	document.getElementById("brothers").innerHTML;
+	
+	document.getElementById("brothers").innerHTML= yay.toUpperCase();
+}
+	
+	//these methods look like functions
+</script>
+
+
+<script>
+ function anthem(){
+	 let task = 
+		document.getElementById("age").innerHTML;
+		
+		document.getElementById("age").innerHTML = task.toUpperCase();	
+}
+
+</script>
